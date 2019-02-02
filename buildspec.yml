@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # - install
+  pre_build:
+    commands:
+      - npm install
+
+  build:
+    commands:
+      # - build
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - index.js
+    - controllers/*
+    - controllers/enControllers/*
+    - controllers/frControllers/*
+    - package.json
+    - node_modules/*
