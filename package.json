@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dimitrybesson/moonshot-api-client/issues"
   },
-  "homepage": "https://github.com/dimitrybesson/moonshot-api-client#readme"
+  "homepage": "https://github.com/dimitrybesson/moonshot-api-client#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
