@@ -5,7 +5,7 @@ const router = express.Router()
 
 const baseUrl = 'https://api-gw.radio-canada.ca/audio/v1'
 
-const mapRadioItem = (item) => {
+const mapMusicItem = item => {
   return {
     id: item.id,
     title: item.title,
@@ -16,18 +16,18 @@ const mapRadioItem = (item) => {
   }
 }
 
-const getRadioContent = (path) => {
+const getMusicContent = (path) => {
   return request({
     uri: `${baseUrl}${path}`,
     json: true
   })
 
-  .then(data => mapRadioItem(data))
+  .then(data => mapMusicItem(data))
 }
 
 router.get('/live', (req, res) => {
 
-  getRadioContent('/live-streams/41')
+  getMusicContent('/live-streams/37')
 
   .then(data => res.send(data))
 })
