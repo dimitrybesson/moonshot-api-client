@@ -25,16 +25,35 @@ const mapNeuroNewsItem = (item) => {
   }
 }
 
-router.get('/top-stories', (req, res) => {
+const getNewsContent = (path) => {
 
   return request({
-    uri: `${baseUrl}/future/lineups/4159${keyQuery}`,
+    uri: `${baseUrl}${path}${keyQuery}`,
     json: true
   })
 
-  .then(data => {
-    return res.send(data.pagedList.items.map(mapNeuroNewsItem))
-  })
+  .then(data => data.pagedList.items.map(mapNeuroNewsItem))
+}
+
+router.get('/top-stories', (req, res) => {
+
+  getNewsContent('/future/lineups/4159')
+
+  .then(data => res.send(data))
+})
+
+router.get('/world', (req, res) => {
+
+  getNewsContent('/themes/2/lineup')
+
+  .then(data => res.send(data))
+})
+
+router.get('/local', (req, res) => {
+
+  getNewsContent('/regions/27/lineup')
+
+  .then(data => res.send(data))
 })
 
 module.exports = router
