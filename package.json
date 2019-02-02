@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/dimitrybesson/moonshot-api-client#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "request-promise-native": "^1.0.5"
   }
 }
