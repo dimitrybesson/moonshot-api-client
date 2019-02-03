@@ -9,7 +9,7 @@ const keyQuery = `?client_key=${key}`
 
 const mapNeuroNewsItem = (item) => {
   // some item objects don't have summaryImage
-  const imageUrl = item.summaryImage ? item.summaryImage.concreteImages[0].mediaLink.href : ''
+  const imageUrl = item.summaryMultimediaItem && item.summaryMultimediaItem.concreteImages ? item.summaryMultimediaItem.concreteImages[0].mediaLink.href : ''
 
   return {
     id: item.id,
