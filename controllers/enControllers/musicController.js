@@ -22,7 +22,7 @@ const getMusicContent = (path) => {
     json: true
   })
 
-  .then(data => mapMusicItem(data))
+  .then(data => [mapMusicItem(data)]) // wrap single item in array
 }
 
 router.get('/live', (req, res) => {

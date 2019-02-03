@@ -8,9 +8,7 @@ const key = '31b2bb0e-85ec-4406-9b22-31c93d7e75f9'
 const keyQuery = `?client_key=${key}`
 
 const mapNeuroThemeItem = (item) => {
-  // some item objects don't have summaryImage
-  console.log(item.id)
-  console.log(item)
+  // some item objects don't have summaryMultimediaItem
 
   const imageUrl = item.summaryMultimediaItem && item.summaryMultimediaItem.concreteImages ? item.summaryMultimediaItem.concreteImages[0].mediaLink.href : ''
 

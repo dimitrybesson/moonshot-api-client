@@ -22,7 +22,7 @@ const getRadioContent = (path) => {
     json: true
   })
 
-  .then(data => mapRadioItem(data))
+  .then(data => [mapRadioItem(data)]) // wrap single item in array
 }
 
 router.get('/live', (req, res) => {
