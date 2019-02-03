@@ -14,6 +14,7 @@ const mapPodcast = item => {
     title: item.title,
     description: item.description,
     image: item.image,
+    contentType: 'podcast',
     hostImage: item.hostImage,
     clipCount: item.clipCount,
     slugTitle: item.slugTitle,
